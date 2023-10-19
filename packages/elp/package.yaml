@@ -13,7 +13,7 @@ categories:
 
 source:
   # renovate:versioning=loose
-  id: pkg:github/rust-lang/elp@2023-10-16
+  id: pkg:github/WhatsApp/erlang-language-platform@2023-10-19
   asset:
     - target: linux_x64_gnu
       file: elp-x86_64-unknown-linux-gnu.gz
@@ -32,7 +32,7 @@ source:
       bin: elp-aarch64-apple-darwin
 
 schemas:
-  lsp: vscode:https://raw.githubusercontent.com/rust-analyzer/rust-analyzer/{{version}}/editors/code/package.json
+  lsp: vscode:https://raw.githubusercontent.com/WhatsApp/erlang-language-platform/{{version}}/editors/code/package.json
 
 bin:
   elp: "{{source.asset.bin}}"
