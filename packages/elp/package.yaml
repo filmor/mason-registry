@@ -1,0 +1,38 @@
+---
+name: elp
+description: |
+  ELP integrates Erlang into modern IDEs via the language server protocol.
+homepage: https://github.com/WhatsApp/erlang-language-platform
+licenses:
+  - Apache-2.0
+  - MIT
+languages:
+  - Erlang
+categories:
+  - LSP
+
+source:
+  # renovate:versioning=loose
+  id: pkg:github/rust-lang/elp@2023-10-16
+  asset:
+    - target: linux_x64_gnu
+      file: elp-x86_64-unknown-linux-gnu.gz
+      bin: elp-x86_64-unknown-linux-gnu
+    - target: linux_arm64_gnu
+      file: elp-aarch64-unknown-linux-gnu.gz
+      bin: elp-aarch64-unknown-linux-gnu
+    - target: linux_x64_musl
+      file: elp-x86_64-unknown-linux-musl.gz
+      bin: elp-x86_64-unknown-linux-musl
+    - target: darwin_x64
+      file: elp-x86_64-apple-darwin.gz
+      bin: elp-x86_64-apple-darwin
+    - target: darwin_arm64
+      file: elp-aarch64-apple-darwin.gz
+      bin: elp-aarch64-apple-darwin
+
+schemas:
+  lsp: vscode:https://raw.githubusercontent.com/rust-analyzer/rust-analyzer/{{version}}/editors/code/package.json
+
+bin:
+  elp: "{{source.asset.bin}}"
